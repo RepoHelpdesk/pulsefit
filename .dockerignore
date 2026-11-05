@@ -1,0 +1,6 @@
+**/bin
+**/obj
+**/node_modules
+**/*.db*
+src/PulseFit.Api/wwwroot
+.git
