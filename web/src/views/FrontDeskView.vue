@@ -92,7 +92,7 @@ async function guest(buyDayPass: boolean) {
       <Alert v-if="action.error.value">{{ action.error.value }}</Alert>
     </div>
 
-    <Card title="Recent at this gym" :padded="false">
+    <Card title="Recent at this gym" flush>
       <ul class="divide-y divide-slate-100 text-sm">
         <li v-for="c in recent" :key="c.id" class="px-4 py-2.5">
           <div class="flex items-center justify-between">

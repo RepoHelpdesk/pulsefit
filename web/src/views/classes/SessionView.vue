@@ -54,7 +54,7 @@ async function cancelClass() {
     <Alert v-if="action.error.value" class="mb-4">{{ action.error.value }}</Alert>
 
     <div class="grid gap-6 lg:grid-cols-3">
-      <Card :title="`Roster · ${s.booked}/${s.capacity} booked${s.waitlisted ? `, ${s.waitlisted} waiting` : ''}`" :padded="false" class="lg:col-span-2">
+      <Card :title="`Roster · ${s.booked}/${s.capacity} booked${s.waitlisted ? `, ${s.waitlisted} waiting` : ''}`" flush class="lg:col-span-2">
         <table class="table-base">
           <thead><tr><th>#</th><th>Member</th><th>Plan</th><th>Booked</th><th>Status</th><th /></tr></thead>
           <tbody>

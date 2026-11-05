@@ -43,7 +43,7 @@ const decide = (id: number, approve: boolean) => done(billingService.decide(id, 
 <template>
   <PageHeader title="Billing" subtitle="Bills are taken from the card on file. A failed payment gives the member 5 days before access is suspended." />
 
-  <Card v-if="refunds.length" title="Refunds" :padded="false" class="mb-6">
+  <Card v-if="refunds.length" title="Refunds" flush class="mb-6">
     <table class="table-base">
       <thead><tr><th>Asked</th><th>Member</th><th>Charge</th><th class="text-right">Refund</th><th>By</th><th>Status</th><th /></tr></thead>
       <tbody>
@@ -67,7 +67,7 @@ const decide = (id: number, approve: boolean) => done(billingService.decide(id, 
 
   <Alert v-if="action.error.value" class="mb-4">{{ action.error.value }}</Alert>
 
-  <Card :padded="false">
+  <Card flush>
     <div class="flex flex-wrap gap-3 border-b border-slate-100 p-4">
       <select v-model="status" class="field w-auto"><option value="">Any status</option><option v-for="s in statuses" :key="s" :value="s">{{ humanize(s) }}</option></select>
       <select v-model="kind" class="field w-auto"><option value="">Any kind</option><option v-for="k in kinds" :key="k" :value="k">{{ humanize(k) }}</option></select>

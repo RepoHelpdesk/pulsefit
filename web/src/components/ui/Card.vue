@@ -1,5 +1,6 @@
 <script setup lang="ts">
-defineProps<{ title?: string; padded?: boolean }>()
+// flush: no inner padding, for tables and lists that run edge to edge.
+defineProps<{ title?: string; flush?: boolean }>()
 </script>
 
 <template>
@@ -8,6 +9,6 @@ defineProps<{ title?: string; padded?: boolean }>()
       <h2 class="text-sm font-semibold text-slate-800">{{ title }}</h2>
       <div class="flex items-center gap-2"><slot name="actions" /></div>
     </header>
-    <div :class="padded === false ? '' : 'p-4'"><slot /></div>
+    <div :class="flush ? '' : 'p-4'"><slot /></div>
   </section>
 </template>

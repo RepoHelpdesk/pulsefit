@@ -27,7 +27,7 @@ const matrix: { what: string; perm: Permission; roles: StaffRole[] }[] = [
 <template>
   <PageHeader title="Staff" />
   <div class="grid gap-6 lg:grid-cols-2">
-    <Card :padded="false">
+    <Card flush>
       <table class="table-base">
         <thead><tr><th>Name</th><th>Role</th><th>Gym</th></tr></thead>
         <tbody>
@@ -39,7 +39,7 @@ const matrix: { what: string; perm: Permission; roles: StaffRole[] }[] = [
         </tbody>
       </table>
     </Card>
-    <Card title="Who can do what" :padded="false">
+    <Card title="Who can do what" flush>
       <table class="table-base">
         <thead><tr><th /><th v-for="r in roles" :key="r" class="text-center">{{ humanize(r) }}</th></tr></thead>
         <tbody>

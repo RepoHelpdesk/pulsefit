@@ -58,7 +58,7 @@ const classes = (p: Plan) => (p.classesPerMonth === null ? 'Unlimited classes' :
     </div>
   </div>
 
-  <Card title="Promo codes" :padded="false">
+  <Card title="Promo codes" flush>
     <table class="table-base">
       <thead><tr><th>Code</th><th>Discount</th><th>Lasts</th><th>Valid until</th><th /></tr></thead>
       <tbody>

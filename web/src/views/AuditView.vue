@@ -25,7 +25,7 @@ watch(skip, load, { immediate: true })
 
 <template>
   <PageHeader title="Audit log" subtitle="Everything staff and the background jobs did, newest first." />
-  <Card :padded="false">
+  <Card flush>
     <div class="flex flex-wrap gap-3 border-b border-slate-100 p-4">
       <input v-model="filters.actor" class="field max-w-xs" placeholder="Who (name, or system:billing-run)" />
       <input v-model="filters.action" class="field max-w-xs" placeholder="Action (billing, class, member…)" />

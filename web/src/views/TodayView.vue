@@ -52,7 +52,7 @@ const greeting = (() => {
   </div>
 
   <div class="grid gap-6 lg:grid-cols-3">
-    <Card :title="isTrainer ? 'Your classes today' : 'Classes today'" :padded="false" class="lg:col-span-2">
+    <Card :title="isTrainer ? 'Your classes today' : 'Classes today'" flush class="lg:col-span-2">
       <table class="table-base">
         <thead><tr><th>Time</th><th>Class</th><th>Gym</th><th>Trainer</th><th class="text-right">Booked</th></tr></thead>
         <tbody>
@@ -71,7 +71,7 @@ const greeting = (() => {
     </Card>
 
     <div class="space-y-6">
-      <Card v-if="auth.can('CheckIn')" title="At the door" :padded="false">
+      <Card v-if="auth.can('CheckIn')" title="At the door" flush>
         <ul class="divide-y divide-slate-100 text-sm">
           <li v-for="c in recent.data.value ?? []" :key="c.id" class="px-4 py-2.5">
             <div class="flex items-center justify-between">
@@ -84,7 +84,7 @@ const greeting = (() => {
         </ul>
       </Card>
 
-      <Card v-if="failed.data.value" title="Failed payments" :padded="false">
+      <Card v-if="failed.data.value" title="Failed payments" flush>
         <ul class="divide-y divide-slate-100 text-sm">
           <li v-for="i in failed.data.value.items" :key="i.id" class="flex items-center justify-between px-4 py-2.5">
             <div>

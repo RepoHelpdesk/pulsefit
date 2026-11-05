@@ -59,7 +59,7 @@ async function run(ok: Promise<boolean>, dialog: { close: () => void } | null) {
     <div class="grid gap-6 lg:grid-cols-5">
       <div class="lg:col-span-2"><MemberSummary :member="m.member.value" /></div>
 
-      <Card :padded="false" class="lg:col-span-3">
+      <Card flush class="lg:col-span-3">
         <div class="flex gap-1 border-b border-slate-100 px-3 pt-2">
           <button
             v-for="t in tabs"

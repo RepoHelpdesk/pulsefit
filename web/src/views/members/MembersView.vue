@@ -35,7 +35,7 @@ watch(skip, load, { immediate: true })
     <RouterLink v-if="auth.can('EditMembers')" to="/members/new" class="btn-primary">New member</RouterLink>
   </PageHeader>
 
-  <Card :padded="false">
+  <Card flush>
     <div class="grid gap-3 border-b border-slate-100 p-4 sm:grid-cols-4">
       <input v-model="filters.q" class="field sm:col-span-1" placeholder="Name, email or phone" />
       <select v-model="filters.status" class="field">

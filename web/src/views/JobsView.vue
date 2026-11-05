@@ -26,7 +26,7 @@ async function runNow(name: string) {
 <template>
   <PageHeader title="Background jobs" subtitle="They run every 15 minutes, in this order. Each only acts on what's due, so running one again is safe." />
   <Alert v-if="run.error.value" class="mb-4">{{ run.error.value }}</Alert>
-  <Card :padded="false">
+  <Card flush>
     <table class="table-base">
       <thead><tr><th>Job</th><th>Last run</th><th>Result</th><th /></tr></thead>
       <tbody>
