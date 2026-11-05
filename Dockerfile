@@ -1,6 +1,8 @@
 # One image: the Vue back office is built into the API's wwwroot and served from the same origin.
 
-FROM node:22-alpine AS web
+# deploy/deploy.ps1 passes a copy kept in our registry, away from Docker Hub's pull limits.
+ARG NODE_IMAGE=node:24-alpine
+FROM ${NODE_IMAGE} AS web
 WORKDIR /src/web
 COPY web/package.json web/package-lock.json ./
 RUN npm ci
